@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
-
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -13,38 +13,101 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="home" id="home" style="background-image: url('./src/assets/Background-home.png');">
+				<div class="home-text">
+					<h1> We have Everyting <br> Your <span>Car</span> Need</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Unde quas, nobis </p>
+					<!-- Home Button-->
+					<a href="#" class="btn">Discover Now</a>
+					
+				</div>
+			</section>
+			<!--Car Section -->
+			<section class="cars" id="cars">
+				<div class="heading">
+					<span> All Cars</span>
+					<h2>We have all types of electric cars</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. harum ut assumenda aliquid dolor quibusdam!</p>
+				</div>
+				<!--Cars Container-->
+				<div class="cars-container container">
+					<!--Box 1-->
+					<div class="box">
+						<img src="./src/assets/car1.jpg" alt="">
+						<h2>Porche Car</h2>
+					</div>
+					<!--Box 2-->
+					<div class="box">
+						<img src="./src/assets/car2.jpg" alt="">
+						<h2>Porche Car</h2>
+					</div>
+					<!--Box 3-->
+					<div class="box">
+						<img src="./src/assets/car3.jpg" alt="">
+						<h2>Porche Car</h2>
+					</div>
+		
+					
+					
+				</div>
+				 <div class="cars-container container">
+				<a href="" class="btn">More Cars</a> </div>
+			</section>
+			<!--About-->
+			<section class="about container" id="about">
+				<div class="about-img">
+					<img src="./src/assets/about.png" alt="">
+				</div>
+				<div class="about-text">
+					<span>About Us</span>
+					<h2>Cheap Prices With <br> Quality Cars </h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique optio placeat voluptate, voluptas maxime assumenda!</p>
+					<!--About Button-->
+					<a href="" class="btn">Learn More</a>
+				</div>
+			</section>
+		   
+			<!--Blog Section-->
+				<section class="blog" id="blog">
+					<div class="heading">
+						<span>Blog & News</span>
+						<h2>Our Blog Content</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, laudantium!</p>
+					</div>
+					<!--Blog Container-->
+					<div class="blog-container container">
+						<!--Box1-->
+						<div class="box">
+						   <img src="./src/assets/car1.jpg" alt="">
+						   <span>February 14, 2021</span>
+						   <h3>How To Get Perfect Car At Low Price?</h3>
+						   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, facere?</p>
+						   <a href="#" class="blog-btn">Read More<i class='bx bx-right-arrow-alt' ></i></a>
+						</div>
+						<!--Box2-->
+						<div class="box">
+							<img src="./src/assets/car4.jpg" alt="">
+							<span>February 14, 2021</span>
+							<h3>How To Get Perfect Car At Low Price?</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, facere?</p>
+							<a href="#" class="blog-btn">Read More<i class='bx bx-right-arrow-alt' ></i></a>
+						 </div>
+						 <!--Box3-->
+						<div class="box">
+							<img src="./src/assets/car3.jpg" alt="">
+							<span>February 14, 2021</span>
+							<h3>How To Get Perfect Car At Low Price?</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, facere?</p>
+							<a href="#" class="blog-btn">Read More<i class='bx bx-right-arrow-alt' ></i></a>
+						 </div>
+					</div>
+					<div class="cars-container container">
+				<a href="/blog" class="btn">More Articles</a> </div>
+				</section>
 		</main>
 		<Footer />
+		<script>
+			import "../scripts/main.js"
+		</script>
 	</body>
 </html>
